@@ -15,6 +15,7 @@ bot.onText(/\/start/, (msg) => {
 
 });
 
+bot.on('message', msg => {
 
 var robot = "Хули ты, хули ты !";
 if (msg.text.indexOf(robot) === 0) {
@@ -33,8 +34,4 @@ if (msg.text.indexOf(robot) === 0) {
     bot.sendMessage(msg.chat.id, "👍");
 }
 
-// bot.on('message', msg => {
-
-//   bot.sendMessage(msg.chat.id, `Hello`);
-
-// })
+})
