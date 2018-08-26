@@ -33,8 +33,8 @@ if (msg.text.indexOf(robot) === 0) {
     bot.sendMessage(msg.chat.id, "👍");
 }
 
-bot.on('message', msg => {
+// bot.on('message', msg => {
 
-  bot.sendMessage(msg.chat.id, `Hello`);
+//   bot.sendMessage(msg.chat.id, `Hello`);
 
-})
+// })
