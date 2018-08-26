@@ -1,28 +1,37 @@
 const TelegramBot = require('node-telegram-bot-api');
-// const Agent = require('socks5-https-client/lib/Agent')
-
-
-
-// process.env.PROXY_SOCKS5_HOST = '37.1.216.137';
-// process.env.PROXY_SOCKS5_PORT = '50080';
-// process.env.PROXY_SOCKS5_USERNAME = 'usr_01';
-// process.env.PROXY_SOCKS5_PASSWORD = 'TWf5u5UWNu';
 
 const bot = new TelegramBot(
   '661826165:AAERMBm8cs06fnO8jSeC4q4P85LIP0w4-gw',
- { 
-  polling: true,
-	// request: {
-	// 	agentClass: Agent,
-	// 	agentOptions: {
-	// 		socksHost: process.env.PROXY_SOCKS5_HOST,
-	// 		socksPort: parseInt(process.env.PROXY_SOCKS5_PORT),
-	// 		socksUsername: process.env.PROXY_SOCKS5_USERNAME,
-	// 		socksPassword: process.env.PROXY_SOCKS5_PASSWORD
-	// 	}
-	// }
-  },
-)
+  { polling: true }
+);
+
+bot.onText(/\/start/, (msg) => {
+      
+  bot.sendMessage(msg.chat.id, "Хули ты, хули ты !", {
+    "reply_markup": {
+        "keyboard": [ ["Хули ты, хули ты !"], ["Чё ты, чё ты !"], ["Нога в ебло летит !"], ["Чёрт ты, чёрт ты !"] ]
+        }
+    });
+
+});
+
+
+var robot = "Хули ты, хули ты !";
+if (msg.text.indexOf(robot) === 0) {
+    bot.sendMessage(msg.chat.id, "Чё ты, чё ты !");
+}
+var robot = "Чё ты, чё ты !";
+if (msg.text.indexOf(robot) === 0) {
+    bot.sendMessage(msg.chat.id, "Нога в ебло летит !");
+}
+var robot = "Нога в ебло летит !";
+if (msg.text.indexOf(robot) === 0) {
+    bot.sendMessage(msg.chat.id, "Чёрт ты, чёрт ты !");
+}
+var robot = "Чёрт ты, чёрт ты !";
+if (msg.text.indexOf(robot) === 0) {
+    bot.sendMessage(msg.chat.id, "👍");
+}
 
 bot.on('message', msg => {
 
