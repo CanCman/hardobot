@@ -1,0 +1,26 @@
+{
+  "name": "hardobot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CanCman/hardobot.git"
+  },
+  "keywords": [
+    "hardobot"
+  ],
+  "author": "CanCman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CanCman/hardobot/issues"
+  },
+  "homepage": "https://github.com/CanCman/hardobot#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.30.0",
+    "socks5-https-client": "^1.2.1"
+  }
+}
