@@ -7,8 +7,10 @@ const bot = new TelegramBot(
 
 bot.onText(/\/start/, (msg) => {
       
-  bot.sendMessage(msg.chat.id, "Хули ты, хули ты !", {
+  bot.sendMessage(msg.chat.id, "", {
     "reply_markup": {
+        "resize_keyboard": true,
+        "selective": true,
         "keyboard": [ ["Хули ты, хули ты !"], ["Чё ты, чё ты !"], ["Нога в ебло летит !"], ["Чёрт ты, чёрт ты !"] ]
         }
     });
